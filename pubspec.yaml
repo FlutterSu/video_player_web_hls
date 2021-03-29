@@ -34,5 +34,5 @@ dependency_overrides:
   video_player_platform_interface: # 1.0.1
     git:
       url: https://github.com/tvip/flutter-plugins.git
-      ref: 048c6d3f4a55b9a44cc6a6ae789bc55634b1b648
+      ref: version-2.1.0
       path: packages/video_player/video_player_platform_interface

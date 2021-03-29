@@ -148,7 +148,7 @@ class VideoPlayerPluginHls extends VideoPlayerPlatform {
   }
 
   @override
-  Future<int> getAbsolutePosition(int textureId) async => -1;
+  Future<int?> getAbsolutePosition(int textureId) async => -1;
 
   @override
   Stream<VideoEvent> videoEventsFor(int textureId) {

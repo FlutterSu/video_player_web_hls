@@ -164,9 +164,11 @@ packages:
   video_player_platform_interface:
     dependency: "direct main"
     description:
-      name: video_player_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "packages/video_player/video_player_platform_interface"
+      ref: "version-2.1.0"
+      resolved-ref: b2217b149c221cb2b28c11f1ad9037c60573bde0
+      url: "https://github.com/tvip/flutter-plugins.git"
+    source: git
     version: "4.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
