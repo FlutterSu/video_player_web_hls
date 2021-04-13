@@ -177,6 +177,7 @@ class _VideoPlayer {
   final Map<String, String> headers;
 
   late VideoElement videoElement;
+  late Hls hls;
   bool isInitialized = false;
   bool isBuffering = false;
 
@@ -206,7 +207,7 @@ class _VideoPlayer {
         'videoPlayer-$textureId', (int viewId) => videoElement);
     if (isSupported() && uri.toString().contains("m3u8")) {
       try {
-        Hls hls = new Hls(
+        hls = new Hls(
           HlsConfig(
             xhrSetup: allowInterop(
               (HttpRequest xhr, url) {
@@ -358,8 +359,8 @@ class _VideoPlayer {
   }
 
   void dispose() {
-    videoElement.removeAttribute('src');
-    videoElement.load();
+    hls.destroy();
+    videoElement.remove();
   }
 
   List<DurationRange> _toDurationRange(TimeRanges buffered) {

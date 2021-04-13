@@ -22,6 +22,8 @@ class Hls {
   external on(String event, Function callback);
 
   external HlsConfig config;
+
+  external destroy();
 }
 
 @JS()
